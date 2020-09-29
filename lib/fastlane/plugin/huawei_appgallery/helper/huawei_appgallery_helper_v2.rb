@@ -68,7 +68,7 @@ module Fastlane
       def self.get_upload_url(client_id, access_token, app_id)
         UI.message("Obtaining upload url ...")
 
-        uri = URI("https://connect-api.cloud.huawei.com/api/publish/v2/upload-url?appId=#{app_id}&suffix=apk")
+        uri = URI("https://connect-api.cloud.huawei.com/api/publish/v2/upload-url?appId=#{app_id}&suffix=aab")
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         request = Net::HTTP::Get.new(uri)
