@@ -116,7 +116,7 @@ module Fastlane
         post_body << "\r\n"
         # add apk
         post_body << "--#{boundary}\r\n"
-        post_body << "Content-Disposition: form-data; name=\"file\"; filename=\"release.apk\"\r\n"
+        post_body << "Content-Disposition: form-data; name=\"file\"; filename=\"release.aab\"\r\n"
         post_body << "Content-Type: multipart/form-data\r\n\r\n"
         post_body << File.read(apk_path).encode('utf-8')
         post_body << "\r\n"
